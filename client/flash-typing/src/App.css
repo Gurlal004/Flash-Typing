@@ -1,0 +1,206 @@
+:root {
+  --bg: #fff;
+  --text: #000;
+
+  color-scheme: light dark;
+}
+
+body.dark{
+  --bg: #000;
+  --text: #fff;
+}
+
+h2{
+  color: var(--text);
+}
+
+body{
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.header .timer{
+  font-size: 1.2rem;
+}
+
+.darkMode button{
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.textField{
+  border: 5px solid #f8f806;
+  padding: 10px;
+  border-radius: 10px;
+  width: 73vw;
+  height: 17vh;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  overflow: hidden;
+  position: relative;
+}
+
+.textField .text{
+  margin-top: 0px;
+  font-weight: bold;
+  font-size: 30px;
+  color: #ffffff;
+
+  white-space: pre-wrap;
+  word-break: break-word;
+
+  display: block;
+  line-height: 1.2;
+  padding-bottom: 0.2em;
+}
+
+.user-input-field{
+  border: 5px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  width: 30vw;
+  height: 3vh;
+  background-color: #f8f806;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-input-field .text-input{
+  margin-top: 2px;
+  width: 30vw;
+  height: 4vh;
+  font-weight: bold;
+  font-size: 30px;
+  background: #f8f806;
+  border: none;
+  outline: none;
+  color: black;
+  caret-color: black;
+  text-align: center;
+
+  &::placeholder{
+    text-align: center;
+  }
+}
+
+.text-to-type {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+button{
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+}
+
+button:disabled{
+  cursor: not-allowed;
+}
+
+.correct{
+  color: #0abf0a; 
+}
+
+.incorrect{
+  color:red;
+}
+
+.medium{
+  color: rgb(206, 206, 6);
+}
+
+.black{
+  color: black;
+}
+
+.white{
+  color: white;
+}
+
+.grey-out .text span{
+  color: grey;
+}
+
+.timeButtons{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.results{
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 1.5em 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+}
+
+.navbar nav{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul{
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  font-weight: 200;
+  padding: 5px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul li a:hover{
+  color: #f8f806;
+  background-color: gray;
+  transition: 0.3s ease-in;
+}
+
+.navbar img{
+  height: 60px;
+  width: auto;
+}
+
+.navbar{
+  border-bottom: #f8f806 2px solid;
+}
