@@ -1,2 +1,2 @@
 # Flash-Typing
-Making a typing website using React Framework
+Making a typing website using React Library
