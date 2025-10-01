@@ -204,3 +204,66 @@ nav ul li a:hover{
 .navbar{
   border-bottom: #f8f806 2px solid;
 }
+
+.loginForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.formRow{
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.formRow label{
+  width: 5rem;
+}
+  
+.formRow input{
+  flex: 1;
+}
+
+.formButtons{
+  display: flex;;
+}
+
+.h1Center h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline #fff;
+  text-underline-offset: 0.3em;
+  font-size: 4rem;
+  color:#f8f806;
+  height: 80vh;
+}
+
+table, th, td{
+  border: 1px solid white;
+}
+
+th, td{
+  padding-right: 3rem;
+  padding-left: 3rem; 
+}
+
+.centerLeaderboard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;  
+}
+
+.leaderboardButtons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.buttonsLogin{
+  display: flex;
+}
