@@ -267,3 +267,18 @@ th, td{
 .buttonsLogin{
   display: flex;
 }
+
+.darkModeBtn {
+    padding: 5px 10px;  
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.darkModeBtn img {
+    width: 25px;
+    height: 25px;
+}

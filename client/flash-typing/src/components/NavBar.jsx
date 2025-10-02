@@ -1,6 +1,8 @@
 import "../App.css";
 import { LoginButton, SignUpButton } from "./LoginSignUp";
 import flashLogo from '../assets/flashLogo.png';
+import sunIcon from '../assets/sunIcon.png';
+import moonIcon from '../assets/moonIcon.png';
 import { Link} from "react-router-dom";
 import {auth, db} from "../config/firebase";
 import {getDoc, doc} from "firebase/firestore";
@@ -30,7 +32,7 @@ import { useNavigate } from "react-router-dom";
 //     )
 // }
 
-function NavBar() {
+function NavBar({darkMode, darkModeToggler}) {
     const [userLoggedIn, setUserLoggedIn] = useState(false);
     const [userDetails, setUserDetails] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -69,28 +71,31 @@ function NavBar() {
 
     return (
         <div className="navbar">
-        <img src={flashLogo} alt="Flash Logo" />
-        <nav>
-            <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/typing">Typing</Link></li>
-            <li><Link to="/leaderboard">Leaderboard</Link></li>
-            </ul>
-        </nav>
-        <div className="buttonsLogin">
-            {loading ? null : userLoggedIn ? (
-                <>
-                <h3 style={{color:"green"}}>Logged in as {userDetails?.username || "User"}</h3>
-                <button onClick={logout}>Logout</button>
-                </>
+            <img src={flashLogo} alt="Flash Logo" />
+            <nav>
+                <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/typing">Typing</Link></li>
+                <li><Link to="/leaderboard">Leaderboard</Link></li>
+                </ul>
+            </nav>
+            <div className="buttonsLogin">
+                {loading ? null : userLoggedIn ? (
+                    <>
+                    <h3 style={{color:"green"}}>Logged in as {userDetails?.username || "User"}</h3>
+                    <button onClick={logout}>Logout</button>
+                    </>
 
-            ) : (
-                <>           
-                <Link to="/login"><button>Login</button></Link>
-                <Link to="/signup"><button>Sign Up</button></Link>
-                </>
-            )}
-        </div>
+                ) : (
+                    <>           
+                    <Link to="/login"><button>Login</button></Link>
+                    <Link to="/signup"><button>Sign Up</button></Link>
+                    </>
+                )}
+                <button className="darkModeBtn" onClick={darkModeToggler}>
+                    <img src={darkMode ? sunIcon : moonIcon}/>
+                </button>
+            </div>
         </div>
     );
 }

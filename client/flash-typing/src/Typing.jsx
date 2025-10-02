@@ -18,14 +18,14 @@ function Typing() {
     const [time, setTime] = useState(10);
     const [timeSetVersion, setTimeSetVersion] = useState(0);
     const [showResults, setShowResults] = useState(false);
-    const [darkMode, setDarkMode] = useState(() => {
-        return localStorage.getItem("darkMode") === "true";
-    });
+    // const [darkMode, setDarkMode] = useState(() => {
+    //     return localStorage.getItem("darkMode") === "true";
+    // });
 
-    useEffect(() => {
-        document.body.classList.toggle("dark", darkMode);
-        localStorage.setItem("darkMode", darkMode);
-    }, [darkMode])
+    // useEffect(() => {
+    //     document.body.classList.toggle("dark", darkMode);
+    //     localStorage.setItem("darkMode", darkMode);
+    // }, [darkMode])
 
     useEffect(() => {
         document.title = "Fast Typing";
@@ -122,16 +122,16 @@ function Typing() {
         setUserInputs(Array(words.length).fill(""));
     };
 
-    const toggleDarkMode = () => {
-        setDarkMode(d => !d);
-    }
+    // const toggleDarkMode = () => {
+    //     setDarkMode(d => !d);
+    // }
 
     return (
         <>
             {/* <NavBar></NavBar> */}
             <div className="header">
                 <TimeCounter key={timeSetVersion} className="timer" onTimeUp={handleTimeUp} isRunning={isRunning} time={time} />
-                <button className="darkMode" onClick={toggleDarkMode}>{darkMode ? "Light Mode" : "Dark Mode"}</button>
+                {/* <button className="darkMode" onClick={toggleDarkMode}>{darkMode ? "Light Mode" : "Dark Mode"}</button> */}
             </div>
             {/* {gameOver && <h2 className="game-over">GAME OVER!</h2>} */}
             <ChooseTimeAmount onTimeAmountSelect={handleTimeAmountSelect} isRunning={isRunning}/>

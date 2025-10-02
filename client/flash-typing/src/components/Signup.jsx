@@ -12,6 +12,14 @@ function SignUp({onClose}){
     const [password, setPassword] = useState("");
     const [confPassword, setConfPassword] = useState("");
     const navigate = useNavigate();
+    const [darkMode, setDarkMode] = useState(() => {
+            return localStorage.getItem("darkMode") === "true";
+        });
+    
+        useEffect(() => {
+            document.body.classList.toggle("dark", darkMode);
+            localStorage.setItem("darkMode", darkMode);
+        }, [darkMode])
 
     const signup = async (e) => {
         e.preventDefault();
@@ -60,7 +68,7 @@ function SignUp({onClose}){
 
             <div className="formButtons">
                 <button type="submit">SignUp</button>
-                <button type="button" onClick={navigate("/")}>Close</button>
+                <button type="button" onClick={ () => navigate("/")}>Close</button>
             </div>
         </form>
         </>
