@@ -86,7 +86,7 @@ function Leaderboard(){
             ): (
                 <>
                     <div className="h1Center">
-                         <h1>Please login to view Leaderboard</h1>
+                         <h1>Please login/signup to view Leaderboard</h1>
                     </div>
                 </>
             )}

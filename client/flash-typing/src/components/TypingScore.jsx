@@ -54,7 +54,7 @@ function TypingScore({input, words, userInputs, currIndex, time, visible }) {
             await Swal.fire({
                 title: 'Your Typing Results',
                 html: `<p>WPM: ${wpm < 0 ? 0 : wpm}</p><p>Accuracy: ${(accuracy * 100).toFixed(2)}%</p>
-                        <br> <p> Sign Up to have you WPM on the leaderboard<p>`,
+                        <br> ${!auth.currentUser ? <p> Sign Up to have you WPM on the leaderboard</p> : ""}`,
                 icon: 'success',
                 confirmButtonText: 'OK'
             }).then(() => {
