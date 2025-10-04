@@ -36,9 +36,8 @@ function SignUp({onClose}){
             position: "top-right"
         });
         }catch(err){
-            console.error(err);
-            toast.success(err.message, {
-                position: "bottom-right"
+            toast.error(err.message, {
+                position: "top-right"
             });
         }
     };

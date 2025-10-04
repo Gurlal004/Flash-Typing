@@ -20,7 +20,9 @@ function Login({onClose}){
             });
             navigate("/");    
         }catch(err){
-
+            toast.error("Wrong email or password. Try again", {
+                position: "top-right"
+            });
         }
     }
 
